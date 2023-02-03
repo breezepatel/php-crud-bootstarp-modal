@@ -29,15 +29,16 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Registration::index');
+$routes->get('/', 'main::index');
 //app/Config/Routes.php
  
 // CRUD Routes
-$routes->get('registration', 'Registration::index');
-$routes->post('registration/store', 'Registration::store');
-$routes->get('registration/edit/(:num)', 'Registration::edit/$1');
-$routes->get('registration/delete/(:num)', 'Registration::delete/$1');
-$routes->post('registration/update', 'Registration::update');
+$routes->get('main', 'main::index');
+$routes->post('main/create', 'main::create');
+$routes->get('main/create', 'main::create');
+$routes->get('main/edit/(:num)', 'main::edit/$1');
+$routes->get('main/delete/(:num)', 'main::delete/$1');
+$routes->post('main/update', 'main::update');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

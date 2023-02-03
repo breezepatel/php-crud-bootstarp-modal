@@ -11,13 +11,13 @@ class RegistrationModel extends Model
     // protected $allowedFields = ['first_name','last_name','address'];
 
     protected $table = 'task1';
-    protected $allowedFields = ['name','age','gender','number','email'];
+    protected $allowedFields = ['first_name', 'last_name','age', 'gender','number','email'];
       
     public function __construct() {
         parent::__construct();
         //$this->load->database();
         $db = \Config\Database::connect();
-        $builder = $db->table('users');
+        $builder = $db->table('task1');
     }
       
     public function insert_data($data) {
